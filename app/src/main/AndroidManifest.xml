@@ -2,7 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.berdosi.app.heartbeat">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.flash" android:required="true"/>
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <!-- 应用程序可以访问 Android 系统中的活动识别功能，从而可以了解用户当前的活动状态，例如步行、跑步、骑车、静止等。
+    这项功能通过利用传感器数据（如加速度计、陀螺仪）和机器学习模型来推断用户当前的活动状态。 -->
+    <uses-permission
+        android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +27,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
+            android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
