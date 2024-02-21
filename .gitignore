@@ -107,3 +107,4 @@ lint/tmp/
 # END https://raw.githubusercontent.com/github/gitignore/master/Android.gitignore
 /.idea/misc.xml
 /.idea/compiler.xml
+/.idea/kotlinc.xml
